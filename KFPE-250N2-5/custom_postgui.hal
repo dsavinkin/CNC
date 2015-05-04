@@ -1,0 +1,53 @@
+# Include your custom_postgui HAL commands here
+# This file will not be overwritten when you run PNCconf again
+#LED signals
+
+net estop-out           => pyvcp.led-estop
+net machine-is-on       => pyvcp.led-power-on
+net servo-amps-on       => pyvcp.led-amp-enable
+net oil-pressure        => pyvcp.led-oil-pressure
+net coolant-flood       => pyvcp.led-flood
+net LUBE.bed-lube       => pyvcp.led-bed-lube
+net SPINDLE.overheat    => pyvcp.led-spindle-overheat
+net oil-pump-overheat   => pyvcp.led-oilpump-overheat
+net flood-overheat      => pyvcp.led-flood-overheat
+net manual-mode         => pyvcp.led-manual
+net auto-mode           => pyvcp.led-auto
+net MDI-mode            => pyvcp.led-mdi
+#LED switches
+
+net X.neg-limit  => pyvcp.led-x-min
+net X.pos-limit  => pyvcp.led-x-max
+net Y.neg-limit  => pyvcp.led-y-min
+net Y.pos-limit  => pyvcp.led-y-max
+net Z.neg-limit  => pyvcp.led-z-min
+net Z.pos-limit  => pyvcp.led-z-max
+
+#TIMERS
+net LUBE.timer-elapsed =>  pyvcp.lube-time
+net PON.time-left      =>  pyvcp.pon-wait
+net PON.lock          <=   pyvcp.pon-lock
+#net PON.out            =>  pyvcp.pon-t
+
+
+#FB WINDOW
+net X.pos-feedback => pyvcp.x-fb
+net Y.pos-feedback => pyvcp.y-fb
+net Z.pos-feedback => pyvcp.z-fb
+
+#F-ERROR WINDOW
+net X.ferror => pyvcp.x-error
+net Y.ferror => pyvcp.y-error
+net Z.ferror => pyvcp.z-error
+
+net X.ferror-min => pyvcp.x-error-min
+net X.ferror-max => pyvcp.x-error-max
+net Y.ferror-min => pyvcp.y-error-min
+net Y.ferror-max => pyvcp.y-error-max
+net Z.ferror-min => pyvcp.z-error-min
+net Z.ferror-max => pyvcp.z-error-max
+
+net SPINDLE.ccw      =>  pyvcp.led-spindle-ccw
+net SPINDLE.cw       =>  pyvcp.led-spindle-cw
+net SPINDLE.enable   =>  pyvcp.led-spindle-enable
+

@@ -1,0 +1,172 @@
+Сделано PNCconf в Tue Mar  6 01:07:41 2012
+
+KFPE-250N2-5 configures EMC2 as:
+
+a metric XYZ type CNC
+
+AXIS will be used as the frontend display
+
+Mesa hardware I/O card - board 0 is designated as
+5i23
+with 72 I/O pins and firmware is: SV12_2X7I48_72
+
+** Mesa 5i23 -> Board # 0  connector  2 **
+
+connector    board     num   component    signal        
+number    position           type        name
+
+P2-1   0   (0 Up/Down Mode-Enable)  x-pwm-enable  
+
+P2-3   1   (0 Muxed Encoder 0)  x-encoder-a  
+
+P2-5   2   (0 Muxed Encoder 1)  y-encoder-a  
+
+P2-7   3   (0 muxed enc)  unused-encoder  
+
+P2-9   4   (1 Muxed Encoder 0)  z-encoder-a  
+
+P2-11   5   (1 Muxed Encoder 1)  unused-encoder  
+
+P2-13   6   (1 muxed enc)  unused-encoder  
+
+P2-15   7   (2 Muxed Encoder 0)  unused-encoder  
+
+P2-17   8   (2 Muxed Encoder 1)  unused-encoder  
+
+P2-19   9   (2 muxed enc)  unused-encoder  
+
+P2-21   10   (0 mux select)  unused-encoder  
+
+P2-23   11   (0 Up/Down Mode -Up)  x-pwm-pulse  
+
+P2-25   12   (0 Up/Down Mode-Down)  x-pwm-dir  
+
+P2-27   13   (1 Up/Down Mode -Up)  y-pwm-pulse  
+
+P2-29   14   (1 Up/Down Mode-Down)  y-pwm-dir  
+
+P2-31   15   (2 Up/Down Mode -Up)  z-pwm-pulse  
+
+P2-33   16   (2 Up/Down Mode-Down)  z-pwm-dir  
+
+P2-35   17   (3 Up/Down Mode -Up)  unused-pwm  
+
+P2-37   18   (3 Up/Down Mode-Down)  unused-pwm  
+
+P2-39   19   (4 Up/Down Mode -Up)  unused-pwm  
+
+P2-41   20   (4 Up/Down Mode-Down)  unused-pwm  
+
+P2-43   21   (5 Up/Down Mode -Up)  unused-pwm  
+
+P2-45   22   (5 Up/Down Mode-Down)  unused-pwm  
+
+P2-47   23   (0 Up/Down Mode-Enable)  x-pwm-enable  
+
+** Mesa 5i23 -> Board # 0  connector  3 **
+
+connector    board     num   component    signal        
+number    position           type        name
+
+P3-1   0   (24 GPIO вход)  unused-input  
+
+P3-3   1   (25 GPIO вход)  unused-input  
+
+P3-5   2   (26 GPIO вход)  unused-input  
+
+P3-7   3   (27 GPIO вход)  unused-input  
+
+P3-9   4   (28 GPIO вход)  unused-input  
+
+P3-11   5   (29 GPIO вход)  unused-input  
+
+P3-13   6   (30 GPIO вход)  unused-input  
+
+P3-15   7   (31 GPIO вход)  unused-input  
+
+P3-17   8   (32 GPIO вход)  unused-input  
+
+P3-19   9   (33 GPIO вход)  unused-input  
+
+P3-21   10   (34 GPIO вход)  unused-input  
+
+P3-23   11   (35 GPIO вход)  unused-input  
+
+P3-25   12   (36 GPIO вход)  unused-input  
+
+P3-27   13   (37 GPIO вход)  unused-input  
+
+P3-29   14   (38 GPIO вход)  unused-input  
+
+P3-31   15   (39 GPIO вход)  unused-input  
+
+P3-33   16   (40 GPIO выход)  unused-output  
+
+P3-35   17   (41 GPIO выход)  unused-output  
+
+P3-37   18   (42 GPIO выход)  unused-output  
+
+P3-39   19   (43 GPIO выход)  unused-output  
+
+P3-41   20   (44 GPIO выход)  unused-output  
+
+P3-43   21   (45 GPIO выход)  machine-is-enabled  invrt
+
+P3-45   22   (46 GPIO выход)  unused-output  
+
+P3-47   23   (47 GPIO выход)  unused-output  
+
+** Mesa 5i23 -> Board # 0  connector  4 **
+
+connector    board     num   component    signal        
+number    position           type        name
+
+P4-1   0   (48 GPIO вход)  unused-input  
+
+P4-3   1   (49 GPIO вход)  unused-input  
+
+P4-5   2   (50 GPIO вход)  unused-input  
+
+P4-7   3   (51 GPIO вход)  unused-input  
+
+P4-9   4   (52 GPIO вход)  unused-input  
+
+P4-11   5   (53 GPIO вход)  unused-input  
+
+P4-13   6   (54 GPIO вход)  unused-input  
+
+P4-15   7   (55 GPIO вход)  unused-input  
+
+P4-17   8   (56 GPIO вход)  unused-input  
+
+P4-19   9   (57 GPIO вход)  unused-input  
+
+P4-21   10   (58 GPIO вход)  unused-input  
+
+P4-23   11   (59 GPIO вход)  unused-input  
+
+P4-25   12   (60 GPIO вход)  unused-input  
+
+P4-27   13   (61 GPIO вход)  unused-input  
+
+P4-29   14   (62 GPIO вход)  unused-input  
+
+P4-31   15   (63 GPIO вход)  unused-input  
+
+P4-33   16   (64 GPIO выход)  unused-output  
+
+P4-35   17   (65 GPIO выход)  unused-output  
+
+P4-37   18   (66 GPIO выход)  unused-output  
+
+P4-39   19   (67 GPIO выход)  unused-output  
+
+P4-41   20   (68 GPIO выход)  unused-output  
+
+P4-43   21   (69 GPIO выход)  unused-output  
+
+P4-45   22   (70 GPIO выход)  unused-output  
+
+P4-47   23   (71 GPIO выход)  unused-output  
+
+

@@ -1,0 +1,525 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pyvcp>
+<!-- 
+Include your PyVCP panel here.
+The contents of this file will not be overwritten when you run stepconf again.
+-->
+
+    <labelframe text="Power Control">
+	<font>("Helvetica",10)</font>
+	<hbox>
+	    <led>
+		<halpin>"led-power-on"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"red"</off_color>
+	    </led>
+	    <label>
+		<text>"POWER ON  "</text>
+	    </label>
+    	    <number>
+		<halpin>"pon-wait"</halpin>
+		<format>"0.0f"</format>
+		<font>("Helvetica",10)</font>
+	    </number>
+	    <checkbutton>
+		<halpin>"pon-lock"</halpin>
+		<text>""</text>
+	    </checkbutton>	    
+<!---	    
+	    <led>
+		<halpin>"pon-t"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"red"</off_color>
+	    </led>	    
+-->	    
+	    <label>
+		<text>"  "</text>
+	    </label>
+    	    <led>
+		<halpin>"led-estop"</halpin>
+		<on_color>"black"</on_color>
+		<off_color>"red"</off_color>
+	    </led>
+	    <label>
+		<text>"ESTOP"</text>
+	    </label>
+	</hbox>
+    </labelframe>
+
+    <labelframe text="Status">
+	<hbox>
+	    <led>
+		<halpin>"led-amp-enable"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"red"</off_color>
+	    </led>
+	    <label>
+		<text>"AMP ENABLE"</text>
+	    </label>
+	    <led>
+		<halpin>"led-oil-pressure"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"red"</off_color>
+	    </led>
+	    <label>
+		<text>"OIL PRESSURE"</text>
+	    </label>
+	</hbox>
+    </labelframe>
+    
+    <labelframe text="Overheat">
+	<hbox>
+	    <led>
+		<halpin>"led-spindle-overheat"</halpin>
+		<on_color>"red"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"SPINDLE"</text>
+	    </label>
+	    <led>
+		<halpin>"led-oilpump-overheat"</halpin>
+		<on_color>"red"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"OIL PUMP"</text>
+	    </label>
+	    <led>
+		<halpin>"led-flood-overheat"</halpin>
+		<on_color>"red"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"FLOOD"</text>
+	    </label>
+	</hbox>
+
+    </labelframe>
+
+    <labelframe text="Cooliant and Lube Control">
+	<font>("Helvetica",10)</font>
+	<hbox>
+	    <led>
+		<halpin>"led-flood"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"COOLANT FLOOD"</text>
+	    </label>
+	</hbox>
+
+	<hbox>
+	    <led>
+		<halpin>"led-bed-lube"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"BED LUBE ("</text>
+	    </label>
+	    
+	    <number>
+		<halpin>"lube-time"</halpin>
+		<format>"0.0f"</format>
+		<font>("Helvetica",10)</font>
+	    </number>
+	    <label>
+		<text>")"</text>
+	    </label>
+	    
+	</hbox>
+    </labelframe>
+
+    <labelframe text="Mode Control">
+	<font>("Helvetica",10)</font>
+	<!--
+	<hbox>
+	    <button>
+		<halpin>"home-on"</halpin>
+		<text>"HOME ALL"</text>
+	    </button>
+	
+	    <button>
+		<halpin>"mode.auto"</halpin>
+		<text>"AUTO"</text>
+	    </button>
+
+	    <button>
+		<halpin>"mode.manual"</halpin>
+		<text>"MANUAL"</text>
+	    </button>
+
+	    <button>
+		<halpin>"mode.mdi"</halpin>
+		<text>"MDI"</text>
+	    </button>
+	</hbox>
+	-->
+	
+	<hbox>
+	    <led>
+		<halpin>"led-auto"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"AUTO"</text>
+	    </label>
+
+	    <led>
+		<halpin>"led-manual"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"MANUAL"</text>
+	    </label>
+
+	    <led>
+		<halpin>"led-mdi"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"MDI"</text>
+	    </label>
+	
+	</hbox>
+    </labelframe>
+<!--
+    <hbox>
+-->
+	<labelframe text="FB-Position">
+	    <hbox>
+		<label>
+		    <text>" X:"</text>
+		    <font>("Helvetica",20)</font>
+		</label>
+		<number>
+		    <halpin>"x-fb"</halpin>
+		    <format>"8.3f"</format>
+		    <font>("Helvetica",20)</font>
+		</number>
+	    </hbox>
+	    <hbox>
+		<label>
+		    <text>" Y:"</text>
+		    <font>("Helvetica",20)</font>
+		</label>
+		<number>
+		    <halpin>"y-fb"</halpin>
+		    <format>"8.3f"</format>
+		    <font>("Helvetica",20)</font>
+		</number>
+	    </hbox>
+	    <hbox>
+		<label>
+		    <text>" Z:"</text>
+		    <font>("Helvetica",20)</font>
+		</label>
+		<number>
+		    <halpin>"z-fb"</halpin>
+		    <format>"8.3f"</format>
+		    <font>("Helvetica",20)</font>
+		</number>
+	    </hbox>
+	</labelframe>
+<!--	
+	<labelframe text="Jog Scale">
+		<radiobutton>
+		    <choices>["step", 3,"30","300", "2000"]</choices>
+		    <halpin>"jog-scale"</halpin>
+		    <font>("Helvetica",12)</font>
+		</radiobutton>
+	</labelframe>
+    </hbox>
+-->	
+	
+
+    
+
+		
+	<labelframe text="F-Errors">
+	    <hbox>
+		<labelframe text="X error">
+		<font>("Helvetica",10)</font>
+		    <number>
+			<halpin>"x-error"</halpin>
+			<format>"6.4f"</format>
+			<font>("Helvetica",11)</font>
+		    </number>
+		</labelframe>
+
+		<labelframe text="X error min">
+		<font>("Helvetica",10)</font>
+		    <number>
+			<halpin>"x-error-min"</halpin>
+			<format>"6.4f"</format>
+			<font>("Helvetica",11)</font>
+		    </number>
+		</labelframe>
+
+		<labelframe text="X error max">
+		<font>("Helvetica",10)</font>
+		    <number>
+			<halpin>"x-error-max"</halpin>
+			<format>"6.4f"</format>
+			<font>("Helvetica",11)</font>
+		    </number>
+		</labelframe>
+	    </hbox>
+
+	    <hbox>
+		<labelframe text="Y error">
+		<font>("Helvetica",10)</font>
+		    <number>
+			<halpin>"y-error"</halpin>
+			<format>"6.4f"</format>
+			<font>("Helvetica",11)</font>
+		    </number>
+		</labelframe>
+
+		<labelframe text="Y error min">
+		<font>("Helvetica",10)</font>
+		    <number>
+			<halpin>"y-error-min"</halpin>
+			<format>"6.4f"</format>
+			<font>("Helvetica",11)</font>
+		    </number>
+		</labelframe>
+
+		<labelframe text="Y error max">
+		<font>("Helvetica",10)</font>
+		    <number>
+			<halpin>"y-error-max"</halpin>
+			<format>"6.4f"</format>
+			<font>("Helvetica",11)</font>
+		    </number>
+		</labelframe>
+	    </hbox>
+	    
+	    <hbox>
+		<labelframe text="Z error">
+		    <font>("Helvetica",10)</font>
+		    <number>
+			<halpin>"z-error"</halpin>
+			<format>"6.4f"</format>
+			<font>("Helvetica",11)</font>
+		    </number>
+		</labelframe>
+
+		<labelframe text="Z error min">
+		    <font>("Helvetica",10)</font>
+		    <number>
+			<halpin>"z-error-min"</halpin>
+			<format>"6.4f"</format>
+			<font>("Helvetica",11)</font>
+		    </number>
+		</labelframe>
+
+		<labelframe text="Z error max">
+		    <font>("Helvetica",10)</font>
+		    <number>
+			<halpin>"z-error-max"</halpin>
+			<format>"6.4f"</format>
+			<font>("Helvetica",11)</font>
+		    </number>
+		</labelframe>
+	    </hbox>
+
+	</labelframe>
+
+    <labelframe text="Spindle">
+	<hbox>
+	    <led>
+		<halpin>"led-spindle-ccw"</halpin>
+		<on_color>"yellow"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"REV"</text>
+	    </label>
+	    <led>
+		<halpin>"led-spindle-enable"</halpin>
+		<on_color>"green"</on_color>
+		<off_color>"red"</off_color>
+	    </led>
+	    <label>
+		<text>"FWD"</text>
+	    </label>
+	    <led>
+		<halpin>"led-spindle-cw"</halpin>
+		<on_color>"yellow"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	</hbox>
+
+    </labelframe>
+
+	
+    <labelframe text="Switches Control">
+	<font>("Helvetica",10)</font>
+	<hbox>
+	    <led>
+		<halpin>"led-x-min"</halpin>
+		<on_color>"red"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"X MIN FAULT"</text>
+	    </label>
+	</hbox>
+	
+	<hbox>
+	    <led>
+		<halpin>"led-x-max"</halpin>
+		<on_color>"red"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"X MAX FAULT"</text>
+	    </label>
+	</hbox>
+
+	<font>("Helvetica",10)</font>
+	<hbox>
+	    <led>
+		<halpin>"led-y-min"</halpin>
+		<on_color>"red"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"Y MIN FAULT"</text>
+	    </label>
+	</hbox>
+	
+	<hbox>
+	    <led>
+		<halpin>"led-y-max"</halpin>
+		<on_color>"red"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"Y MAX FAULT"</text>
+	    </label>
+	</hbox>
+
+
+	<hbox>
+	    <led>
+		<halpin>"led-z-min"</halpin>
+		<on_color>"red"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"Z MIN FAULT"</text>
+	    </label>
+	</hbox>
+	
+	<hbox>
+	    <led>
+		<halpin>"led-z-max"</halpin>
+		<on_color>"red"</on_color>
+		<off_color>"black"</off_color>
+	    </led>
+	    <label>
+		<text>"Z MAX FAULT"</text>
+	    </label>
+	</hbox>
+    </labelframe>
+
+<!--
+    <labelframe text="Spindle Control">
+	<font>("Helvetica",10)</font>
+	    <vbox>
+		<relief>RIDGE</relief>         
+		<bd>6</bd>
+            	    <label>
+                        <text>"Spindle Speed:"</text>
+            	    </label>
+            	    <bar>
+                        <halpin>"spindle-speed"</halpin>
+			<min_>0</min_>
+                        <max_>2000</max_>
+            	    </bar>
+	    </vbox>
+	    
+    </labelframe>
+-->
+    
+<!--
+    <labelframe text="Programm Control">
+	<font>("Helvetica",10)</font>
+	    <hbox>
+		<button>
+		    <width>6</width>
+		    <halpin>"prog-run"</halpin>
+		    <text>"RUN"</text>
+		</button>
+	    
+
+		<button>
+		    <width>6</width>
+		    <halpin>"prog-pause"</halpin>
+		    <text>"PAUSE"</text>
+		</button>
+
+		<button>
+		    <width>6</width>
+		    <halpin>"prog-resume"</halpin>
+		    <text>"RESUME"</text>
+		</button>
+	    
+		<button>
+		    <width>6</width>
+		    <halpin>"prog-stop"</halpin>
+		    <text>"STOP"</text>
+		</button>
+	    </hbox>
+    </labelframe>
+-->
+
+<!--
+    <labelframe text="Jog Control">
+	    <font>("Helvetica",10)</font>
+	    <hbox>
+		<relief>RAISED</relief>
+		<bd>3</bd>
+		    <button>
+			<font>("Helvetica",12)</font>
+			<width>3</width>
+			<halpin>"x-plus"</halpin>
+			<text>"X+"</text>
+		    </button>
+		    
+		    <button>
+			<font>("Helvetica",12)</font>
+			<width>3</width>
+			<halpin>"x-minus"</halpin>
+			<text>"X-"</text>
+		    </button>
+		    
+		    <button>
+			<font>("Helvetica",12)</font>
+			<width>3</width>
+			<halpin>"z-plus"</halpin>
+			<text>"Z+"</text>
+		    </button>
+		    
+		    <button>
+			<font>("Helvetica",12)</font>
+			<width>3</width>
+			<halpin>"z-minus"</halpin>
+			<text>"Z-"</text>
+		    </button>
+	    </hbox>
+    
+    </labelframe>
+-->
+
+
+
+
+</pyvcp>
